@@ -277,15 +277,8 @@ img {
 
 .logo img {
     display: block;
-    height: 55px;
-    /* Bigger size */
+    height: 60px;
     width: auto;
-
-    /* Make background transparent */
-    mix-blend-mode: screen;
-
-    /* Remove any border/edge artifacts */
-    filter: brightness(1.2) contrast(1.1);
 }
 
 .logo:hover {
