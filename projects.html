@@ -58,8 +58,20 @@
                                 <li><strong>Error Reduction:</strong> Standardized inputs and automated validation
                                     eliminated inconsistency and human error.</li>
                             </ul>
+                            <div class="tech-deep-dive"
+                                style="display:none; margin-top: 1.5rem; border-top: 1px solid var(--color-border); padding-top: 1rem;">
+                                <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">Technical Deep Dive</h4>
+                                <ul class="skill-list">
+                                    <li><strong>Architecture:</strong> Node.js/Express interface to Active Directory via
+                                        secure LDAP.</li>
+                                    <li><strong>Challenge:</strong> Mitigating race conditions during bulk account
+                                        creation by implementing a Redis-backed job queue.</li>
+                                    <li><strong>Security:</strong> Full AES-256 encryption for data in transit and at
+                                        rest; immutable audit logging.</li>
+                                </ul>
+                            </div>
                             <div class="project-actions">
-                                <a href="#" class="btn btn-secondary">View Case Study</a>
+                                <button class="btn btn-secondary toggle-details">View Technical Details</button>
                             </div>
                         </div>
                     </article>
@@ -88,8 +100,20 @@
                                 <li><strong>Integration:</strong> Seamless read/write operations to the Finance
                                     Enterprise database.</li>
                             </ul>
+                            <div class="tech-deep-dive"
+                                style="display:none; margin-top: 1.5rem; border-top: 1px solid var(--color-border); padding-top: 1rem;">
+                                <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">Technical Deep Dive</h4>
+                                <ul class="skill-list">
+                                    <li><strong>Backend:</strong> C# .NET Core API decoupling business logic from data
+                                        access.</li>
+                                    <li><strong>Optimization:</strong> Offloaded complex payroll calculations to SQL
+                                        Stored Procedures where appropriate for batch performance.</li>
+                                    <li><strong>Reliability:</strong> Implemented transactional integrity to ensure
+                                        financial data is never in a partial state.</li>
+                                </ul>
+                            </div>
                             <div class="project-actions">
-                                <a href="#" class="btn btn-secondary">View Case Study</a>
+                                <button class="btn btn-secondary toggle-details">View Technical Details</button>
                             </div>
                         </div>
                     </article>
@@ -116,54 +140,96 @@
                                 <li>Significantly lowered annual licensing costs.</li>
                             </ul>
                         </div>
-                    </article>
-
-                    <!-- DBA Project 2 -->
-                    <article id="finance-upgrade" class="project-card"
-                        style="flex-direction: row; flex-wrap: wrap; align-items: flex-start;">
-                        <div class="project-content" style="width: 100%;">
-                            <span class="project-tag">System Administration</span>
-                            <h2 class="project-title">Finance Software Upgrade</h2>
-                            <p class="project-description">
-                                <strong>Challenge:</strong> Upgrade a legacy financial reporting system that was
-                                critical for end-of-quarter processing, with a strict maintenance window.
-                            </p>
-                            <p class="project-description">
-                                <strong>Solution:</strong> Collaborated with vendors to patch custom extensions,
-                                performed load testing in a staging environment, and orchestrated a weekend cutover
-                                execution.
-                            </p>
-                            <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Outcome:</h4>
+                        <div class="tech-deep-dive"
+                            style="display:none; margin-top: 1.5rem; border-top: 1px solid var(--color-border); padding-top: 1rem;">
+                            <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">Technical Strategy</h4>
                             <ul class="skill-list">
-                                <li>Improved report generation speed by 40%.</li>
-                                <li>Enhanced security compliance with new encryption standards.</li>
+                                <li><strong>Zero Downtime:</strong> Utilized Transaction Log Shipping to keep
+                                    destination in sync until cutover.</li>
+                                <li><strong>Validation:</strong> Custom Python scripts performed block-level checksum
+                                    comparisons.</li>
                             </ul>
                         </div>
-                    </article>
-
-                    <!-- DBA Project 3 -->
-                    <article id="gis-upgrade" class="project-card"
-                        style="flex-direction: row; flex-wrap: wrap; align-items: flex-start;">
-                        <div class="project-content" style="width: 100%;">
-                            <span class="project-tag">GIS & Spatial Data</span>
-                            <h2 class="project-title">GIS System Upgrade</h2>
-                            <p class="project-description">
-                                <strong>Challenge:</strong> Modernize an outdated Geographic Information System (GIS) to
-                                support new high-resolution spatial data formats and web-based mapping clients.
-                            </p>
-                            <p class="project-description">
-                                <strong>Solution:</strong> Upgraded the backend spatial database (PostGIS/ESRI),
-                                optimized spatial indices, and integrated with new web services.
-                            </p>
-                            <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Outcome:</h4>
-                            <ul class="skill-list">
-                                <li>Enabled real-time map rendering for web clients.</li>
-                                <li>Supported ingestion of complex 3D spatial data.</li>
-                            </ul>
+                        <div class="project-actions">
+                            <button class="btn btn-secondary toggle-details">View Technical Details</button>
                         </div>
-                    </article>
-
                 </div>
+                </article>
+
+                <!-- DBA Project 2 -->
+                <article id="finance-upgrade" class="project-card"
+                    style="flex-direction: row; flex-wrap: wrap; align-items: flex-start;">
+                    <div class="project-content" style="width: 100%;">
+                        <span class="project-tag">System Administration</span>
+                        <h2 class="project-title">Finance Software Upgrade</h2>
+                        <p class="project-description">
+                            <strong>Challenge:</strong> Upgrade a legacy financial reporting system that was
+                            critical for end-of-quarter processing, with a strict maintenance window.
+                        </p>
+                        <p class="project-description">
+                            <strong>Solution:</strong> Collaborated with vendors to patch custom extensions,
+                            performed load testing in a staging environment, and orchestrated a weekend cutover
+                            execution.
+                        </p>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Outcome:</h4>
+                        <ul class="skill-list">
+                            <li>Improved report generation speed by 40%.</li>
+                            <li>Enhanced security compliance with new encryption standards.</li>
+                        </ul>
+                    </div>
+                    <div class="tech-deep-dive"
+                        style="display:none; margin-top: 1.5rem; border-top: 1px solid var(--color-border); padding-top: 1rem;">
+                        <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">Technical Details</h4>
+                        <ul class="skill-list">
+                            <li><strong>Performance:</strong> Re-indexed core tables and updated statistics
+                                post-upgrade.</li>
+                            <li><strong>Security Handbook:</strong> Documented new role-based access controls (RBAC)
+                                implementation.</li>
+                        </ul>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-secondary toggle-details">View Technical Details</button>
+                    </div>
+            </div>
+            </article>
+
+            <!-- DBA Project 3 -->
+            <article id="gis-upgrade" class="project-card"
+                style="flex-direction: row; flex-wrap: wrap; align-items: flex-start;">
+                <div class="project-content" style="width: 100%;">
+                    <span class="project-tag">GIS & Spatial Data</span>
+                    <h2 class="project-title">GIS System Upgrade</h2>
+                    <p class="project-description">
+                        <strong>Challenge:</strong> Modernize an outdated Geographic Information System (GIS) to
+                        support new high-resolution spatial data formats and web-based mapping clients.
+                    </p>
+                    <p class="project-description">
+                        <strong>Solution:</strong> Upgraded the backend spatial database (PostGIS/ESRI),
+                        optimized spatial indices, and integrated with new web services.
+                    </p>
+                    <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Outcome:</h4>
+                    <ul class="skill-list">
+                        <li>Enabled real-time map rendering for web clients.</li>
+                        <li>Supported ingestion of complex 3D spatial data.</li>
+                    </ul>
+                </div>
+                <div class="tech-deep-dive"
+                    style="display:none; margin-top: 1.5rem; border-top: 1px solid var(--color-border); padding-top: 1rem;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">Technical Implementation</h4>
+                    <ul class="skill-list">
+                        <li><strong>Spatial Indexing:</strong> Implemented GiST indexes for sub-second spatial queries.
+                        </li>
+                        <li><strong>Data Pipeline:</strong> Automated ETL workflows for daily ingestion of aerial
+                            imagery.</li>
+                    </ul>
+                </div>
+                <div class="project-actions">
+                    <button class="btn btn-secondary toggle-details">View Technical Details</button>
+                </div>
+                </div>
+            </article>
+
+            </div>
             </div>
         </section>
     </main>
