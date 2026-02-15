@@ -93,4 +93,25 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
         });
     });
+
+    // --- Project Detail Toggle ---
+    document.querySelectorAll('.toggle-details').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const projectCard = button.closest('.project-content');
+            const deepDive = projectCard.querySelector('.tech-deep-dive');
+
+            if (deepDive.style.display === 'none') {
+                deepDive.style.display = 'block';
+                button.textContent = 'Hide Technical Details';
+                // Optional: Fade in
+                deepDive.style.opacity = 0;
+                setTimeout(() => deepDive.style.opacity = 1, 10);
+                deepDive.style.transition = 'opacity 0.5s ease';
+            } else {
+                deepDive.style.display = 'none';
+                button.textContent = 'View Technical Details';
+            }
+        });
+    });
 });
