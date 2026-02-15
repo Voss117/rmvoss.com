@@ -1,0 +1,3 @@
+# Disable Jekyll to ensure static files are served correctly
+jekyll_plugins: []
+include: [".nojekyll"]
