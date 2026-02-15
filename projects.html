@@ -35,6 +35,51 @@
                 <div class="projects-grid" style="grid-template-columns: 1fr; margin-top: 4rem; gap: 2rem;">
 
                     <!-- NEW Full Stack Projects -->
+                    <article id="ping" class="project-card">
+                        <div class="project-content" style="width: 100%;">
+                            <span class="project-tag">Real-Time Communication</span>
+                            <h2 class="project-title">Ping: Enterprise Messaging System</h2>
+                            <p class="project-description">
+                                <strong>Challenge:</strong> The organization faced a $100,000/year quote for Slack
+                                which offered insufficient data retention (90 days vs 1 year required) and lacked
+                                critical government compliance features (FOIA auditing).
+                            </p>
+                            <p class="project-description">
+                                <strong>Solution:</strong> Architected and built a fully on-premise, real-time messaging
+                                platform using C# and SignalR backed by SQL Server. It provides instant communication
+                                while adhering to strict legal and accessibility standards.
+                            </p>
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Key Features & Impact:</h4>
+                            <ul class="skill-list" style="margin-bottom: 2rem;">
+                                <li><strong>$100k Annual Savings:</strong> Eliminated the need for expensive third-party
+                                    SaaS licensing.</li>
+                                <li><strong>Government Compliance:</strong> Built-in HR audit portals for FOIA requests
+                                    and harassment investigations; 1-year data retention policy enforced at the database
+                                    level.</li>
+                                <li><strong>Full Accessibility (ADA):</strong> Engineered front-end with high-contrast
+                                    modes, scalable typography, and reduced motion settings.</li>
+                                <li><strong>Departmental Security:</strong> Granular RBAC permissions ensure department
+                                    isolation while permitting secure interdepartmental communication.</li>
+                            </ul>
+                            <div class="tech-deep-dive"
+                                style="display:none; margin-top: 1.5rem; border-top: 1px solid var(--color-border); padding-top: 1rem;">
+                                <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">Technical Deep Dive</h4>
+                                <ul class="skill-list">
+                                    <li><strong>Real-Time Engine:</strong> Leveraged SignalR over WebSockets for
+                                        instant message delivery, typing indicators, and presence detection.</li>
+                                    <li><strong>Data Persistence:</strong> All messages, preferences, and gifs are
+                                        stored in a normalized SQL Server schema with partitioning for efficient
+                                        historical queries.</li>
+                                    <li><strong>Security:</strong> Permissions are managed via SQL-backed roles,
+                                        ensuring data integrity and access control down to the channel level.</li>
+                                </ul>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-secondary toggle-details">View Technical Details</button>
+                            </div>
+                        </div>
+                    </article>
+
                     <article id="userforge" class="project-card">
                         <div class="project-content" style="width: 100%;">
                             <span class="project-tag">Full Stack & Automation</span>
