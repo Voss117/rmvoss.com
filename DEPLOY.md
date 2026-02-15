@@ -53,9 +53,27 @@ If you want to use `www.rmvoss.com`:
 1. In the **Pages** settings, scroll to **Custom domain**.
 2. Enter `www.rmvoss.com`.
 3. Click **Save**.
-4. You will need to update your DNS settings (at your domain registrar like GoDaddy or Namecheap) to point to GitHub Pages.
-   - **CNAME Record**: Host `www` points to `USERNAME.github.io`.
-   - **A Records**: Point `@` to GitHub's IPs (check GitHub docs for current IPs).
+4. **CRITICAL: Protect Your Email Settings**
+   - **DO NOT TOUCH** any records with type **MX** (e.g., `aspmx.l.google.com`). These are for your email.
+   - **DO NOT TOUCH** any records with type **TXT** (e.g., `v=spf1...`, `google._domainkey`). These are for email security.
+   - **DO NOT TOUCH** the `CNAME` record with host `dediivwkns4v` (Google verification).
+
+5. **Update Website Records Only**:
+
+   **Step A: Delete Old Website Record**
+   - Find the **CNAME** record for **Host: `www`** that points to `ghs.googlehosted.com`.
+   - **DELETE** this record.
+
+   **Step B: Add GitHub Pages Records**
+   - Add these 4 **A Records** (Leave Host as `@` or blank):
+     - `185.199.108.153`
+     - `185.199.109.153`
+     - `185.199.110.153`
+     - `185.199.111.153`
+   
+   - Add a new **CNAME Record**:
+     - **Host**: `www`
+     - **Value**: `Voss117.github.io`
 
 ## Verification
 After a few minutes, your site will be live at `https://USERNAME.github.io/rmvoss.com` (or your custom domain)!
