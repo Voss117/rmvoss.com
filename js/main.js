@@ -114,4 +114,54 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // --- Contact Form AJAX ---
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+
+            button.disabled = true;
+            button.textContent = 'Sending...';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Success
+                    form.reset();
+                    button.textContent = 'Message Sent!';
+                    button.style.backgroundColor = 'var(--color-secondary)';
+
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        button.disabled = false;
+                        button.textContent = originalText;
+                        button.style.backgroundColor = '';
+                    }, 3000);
+                } else {
+                    // Error from server
+                    const result = await response.json();
+                    alert(result.error || "Oops! There was a problem submitting your form.");
+                    button.disabled = false;
+                    button.textContent = originalText;
+                }
+            } catch (error) {
+                // Network error
+                alert("Oops! There was a problem submitting your form.");
+                button.disabled = false;
+                button.textContent = originalText;
+            }
+        });
+    }
+
 });
