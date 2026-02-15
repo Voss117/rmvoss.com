@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Typewriter Effect ---
     const typewriterElement = document.getElementById('typewriter');
-    const texts = ["Full Stack Developer", "Database Expert", "Problem Solver"];
+    const texts = ["Web Applications", "Data Systems", "Enterprise Solutions"];
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
