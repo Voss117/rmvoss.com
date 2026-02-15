@@ -269,9 +269,15 @@ img {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    display: block;
+    max-height: 40px;
+    width: auto;
 }
 
 .nav-list {
