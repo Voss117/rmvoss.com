@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Robert Voss</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">RMVoss</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="mailto:Robert@rmvoss.com" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Case Studies</h1>
+                <p class="hero-subtitle">A deep dive into my technical work, ranging from enterprise database migrations
+                    to modern full-stack web applications.</p>
+
+                <div class="projects-grid" style="grid-template-columns: 1fr; margin-top: 4rem;">
+
+                    <!-- NEW Full Stack Projects -->
+                    <article id="fullstack-1" class="project-card"
+                        style="flex-direction: row; flex-wrap: wrap; align-items: flex-start;">
+                        <div class="project-content" style="width: 100%;">
+                            <span class="project-tag">Full Stack Development</span>
+                            <h2 class="project-title">Project One (Placeholder)</h2>
+                            <p class="project-description">
+                                Details coming soon. This project will demonstrate proficiency in the MERN stack
+                                (MongoDB, Express, React, Node.js) or similar technologies.
+                            </p>
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Key Features:</h4>
+                            <ul class="skill-list" style="margin-bottom: 2rem;">
+                                <li>RESTful API Design</li>
+                                <li>Responsive Frontend Architecture</li>
+                                <li>Secure Authentication (JWT)</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-secondary">View Source</a>
+                                <a href="#" class="btn btn-primary">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- DBA Project 1 -->
+                    <article id="database-migration" class="project-card"
+                        style="flex-direction: row; flex-wrap: wrap; align-items: flex-start;">
+                        <div class="project-content" style="width: 100%;">
+                            <span class="project-tag">Database Architecture</span>
+                            <h2 class="project-title">Database Instance Migration</h2>
+                            <p class="project-description">
+                                <strong>Challenge:</strong> Identify and consolidate multiple redundant database
+                                instances to reduce licensing costs and improve manageability without disrupting
+                                critical business operations.
+                            </p>
+                            <p class="project-description">
+                                <strong>Solution:</strong> Executed a phased migration plan involving rigorous
+                                compatibility testing, data validation, and a scripted failover process.
+                            </p>
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Outcome:</h4>
+                            <ul class="skill-list">
+                                <li>Reduced server footprint by 30%.</li>
+                                <li>Zero data loss during transition.</li>
+                                <li>Significantly lowered annual licensing costs.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- DBA Project 2 -->
+                    <article id="finance-upgrade" class="project-card"
+                        style="flex-direction: row; flex-wrap: wrap; align-items: flex-start;">
+                        <div class="project-content" style="width: 100%;">
+                            <span class="project-tag">System Administration</span>
+                            <h2 class="project-title">Finance Software Upgrade</h2>
+                            <p class="project-description">
+                                <strong>Challenge:</strong> Upgrade a legacy financial reporting system that was
+                                critical for end-of-quarter processing, with a strict maintenance window.
+                            </p>
+                            <p class="project-description">
+                                <strong>Solution:</strong> Collaborated with vendors to patch custom extensions,
+                                performed load testing in a staging environment, and orchestrated a weekend cutover
+                                execution.
+                            </p>
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Outcome:</h4>
+                            <ul class="skill-list">
+                                <li>Improved report generation speed by 40%.</li>
+                                <li>Enhanced security compliance with new encryption standards.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- DBA Project 3 -->
+                    <article id="gis-upgrade" class="project-card"
+                        style="flex-direction: row; flex-wrap: wrap; align-items: flex-start;">
+                        <div class="project-content" style="width: 100%;">
+                            <span class="project-tag">GIS & Spatial Data</span>
+                            <h2 class="project-title">GIS System Upgrade</h2>
+                            <p class="project-description">
+                                <strong>Challenge:</strong> Modernize an outdated Geographic Information System (GIS) to
+                                support new high-resolution spatial data formats and web-based mapping clients.
+                            </p>
+                            <p class="project-description">
+                                <strong>Solution:</strong> Upgraded the backend spatial database (PostGIS/ESRI),
+                                optimized spatial indices, and integrated with new web services.
+                            </p>
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Outcome:</h4>
+                            <ul class="skill-list">
+                                <li>Enabled real-time map rendering for web clients.</li>
+                                <li>Supported ingestion of complex 3D spatial data.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Robert Voss. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
