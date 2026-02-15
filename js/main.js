@@ -161,3 +161,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+// --- Mobile Menu Toggle ---
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const nav = document.querySelector('.nav');
+
+if (mobileMenuBtn && nav) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        nav.classList.toggle('active');
+
+        // Toggle aria-expanded for accessibility
+        const isExpanded = mobileMenuBtn.classList.contains('active');
+        mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-list a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            nav.classList.remove('active');
+            mobileMenuBtn.setAttribute('aria-expanded', false);
+        });
+    });
+}
