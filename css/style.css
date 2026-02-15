@@ -6,7 +6,7 @@
     --color-text-muted: #94a3b8;
     --color-primary: #38bdf8;
     --color-primary-hover: #0ea5e9;
-    --color-accent: #f472b6;
+    --color-accent: #34d399;
     --color-border: #334155;
 
     /* Spacing */
@@ -450,7 +450,11 @@ img {
     /* This creates the gradient border effect */
     background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.5);
-    animation: float 6s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.about-image-container:hover {
+    transform: scale(1.02);
 }
 
 .about-image {
