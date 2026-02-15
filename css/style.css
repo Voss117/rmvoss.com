@@ -269,32 +269,23 @@ img {
 }
 
 .logo {
-    display: inline-block;
-    font-family: 'Inter', sans-serif;
-    /* Force font */
-    font-size: 2.2rem;
-    font-weight: 900;
-    /* Extra Bold */
-    text-transform: uppercase;
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    letter-spacing: -1px;
+    padding: 0;
+}
 
-    /* Fallback color */
-    color: #38bdf8;
+.logo img {
+    display: block;
+    height: 55px;
+    /* Bigger size */
+    width: auto;
 
-    /* Gradient Text Magic */
-    background: linear-gradient(135deg, #38bdf8 0%, #10b981 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
+    /* Make background transparent */
+    mix-blend-mode: screen;
 
-    /* Transparency trick */
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    /* Standard fall-through */
-
-    padding: 0.5rem 0;
-    line-height: 1;
-    /* Tighten line height */
+    /* Remove any border/edge artifacts */
+    filter: brightness(1.2) contrast(1.1);
 }
 
 .logo:hover {
