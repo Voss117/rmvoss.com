@@ -138,7 +138,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok) {
                     // Success
-                    form.reset();
+                    form.style.display = 'none'; // Hide form
+                    const successMessage = document.getElementById('success-message');
+                    if (successMessage) {
+                        successMessage.style.display = 'block'; // Show success message
+                    }
                     button.textContent = 'Message Sent!';
                     button.style.backgroundColor = 'var(--color-secondary)';
 
