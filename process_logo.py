@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageFilter
 
 def make_transparent(input_path, output_path):
     img = Image.open(input_path).convert("RGBA")
@@ -7,8 +7,8 @@ def make_transparent(input_path, output_path):
     newData = []
     for item in datas:
         # Check for black (or very dark gray) pixels
-        # If the pixel is dark enough (R, G, B < 30), make it transparent
-        if item[0] < 30 and item[1] < 30 and item[2] < 30:
+        # Increased threshold to 60 to catch artifacts
+        if item[0] < 60 and item[1] < 60 and item[2] < 60:
             newData.append((255, 255, 255, 0))  # Transparent
         else:
             newData.append(item)
