@@ -270,16 +270,31 @@ img {
 
 .logo {
     display: inline-block;
+    font-family: 'Inter', sans-serif;
+    /* Force font */
     font-size: 2.2rem;
     font-weight: 900;
+    /* Extra Bold */
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: -1px;
+
+    /* Fallback color */
+    color: #38bdf8;
+
+    /* Gradient Text Magic */
     background: linear-gradient(135deg, #38bdf8 0%, #10b981 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+
+    /* Transparency trick */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    /* Standard fall-through */
+
     padding: 0.5rem 0;
+    line-height: 1;
+    /* Tighten line height */
 }
 
 .logo:hover {
