@@ -269,16 +269,34 @@ img {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
     text-decoration: none;
-    padding: 0;
+    letter-spacing: -2px;
+    /* Tighter spacing to mimic connected letters */
+
+    /* Fallback color */
+    color: #38bdf8;
+
+    /* Gradient Text Magic */
+    background: linear-gradient(135deg, #38bdf8 0%, #10b981 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Transparency trick */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    padding: 0.5rem 0;
+    line-height: 1;
 }
 
 .logo img {
-    display: block;
-    height: 60px;
-    width: auto;
+    display: none;
+    /* Hide image if present */
 }
 
 .logo:hover {
