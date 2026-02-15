@@ -870,4 +870,49 @@ img {
     .resume-section h3::after {
         display: none;
     }
+
+    /* Print Compactness */
+    .resume-header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .resume-header {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .resume-section {
+        margin-bottom: 1.2rem;
+        page-break-inside: avoid;
+    }
+
+    .resume-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .job {
+        margin-bottom: 1rem;
+        page-break-inside: avoid;
+    }
+
+    .job-title {
+        font-size: 1.1rem;
+    }
+
+    .job-company {
+        font-size: 1rem;
+    }
+
+    .job-details li {
+        margin-bottom: 0.25rem;
+        line-height: 1.35;
+        font-size: 0.9rem;
+    }
+
+    .view-pdf-button {
+        display: none !important;
+    }
 }
