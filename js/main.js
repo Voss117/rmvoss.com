@@ -68,4 +68,29 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.add('scroll-hidden'); // Ensure initial state is hidden
         observer.observe(el);
     });
+
+    // --- 3D Tilt Effect ---
+    document.querySelectorAll('.project-card, .skill-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Calculate rotation (center is 0,0)
+            const xPct = (x / rect.width) - 0.5;
+            const yPct = (y / rect.height) - 0.5;
+
+            // Max rotation degrees
+            const maxTilt = 5; // Subtle tilt
+
+            const xTilt = yPct * -maxTilt; // Tilt x based on y position (up/down)
+            const yTilt = xPct * maxTilt;  // Tilt y based on x position (left/right)
+
+            card.style.transform = `perspective(1000px) rotateX(${xTilt}deg) rotateY(${yTilt}deg) scale(1.02)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+        });
+    });
 });
