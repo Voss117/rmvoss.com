@@ -143,15 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (successMessage) {
                         successMessage.style.display = 'block'; // Show success message
                     }
-                    button.textContent = 'Message Sent!';
-                    button.style.backgroundColor = 'var(--color-secondary)';
 
-                    // Reset button after 3 seconds
-                    setTimeout(() => {
-                        button.disabled = false;
-                        button.textContent = originalText;
-                        button.style.backgroundColor = '';
-                    }, 3000);
                 } else {
                     // Error from server
                     const result = await response.json();
