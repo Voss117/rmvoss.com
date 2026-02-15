@@ -645,3 +645,229 @@ img {
         gap: 1rem;
     }
 }
+
+/* --- Resume Page Styling --- */
+
+.resume-container {
+    max-width: 900px;
+    margin: 8rem auto 4rem;
+    /* Top margin accounts for fixed header */
+    background-color: var(--color-bg-alt);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle top accent border */
+.resume-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.resume-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #fff, var(--color-text-muted));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+}
+
+.resume-header p {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+}
+
+.resume-header a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.resume-header a:hover {
+    color: var(--color-primary);
+}
+
+.resume-section {
+    margin-bottom: 2.5rem;
+}
+
+.resume-section h3 {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Line decoration next to section titles */
+.resume-section h3::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--color-border);
+    margin-left: 1rem;
+}
+
+.job {
+    margin-bottom: 2rem;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+    flex-wrap: wrap;
+    /* Wrap on mobile */
+    gap: 0.5rem;
+}
+
+.job-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.job-company {
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.job-date {
+    color: var(--color-text-muted);
+    font-family: monospace;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.job-details {
+    list-style: none;
+    margin-top: 0.75rem;
+}
+
+.job-details li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.job-details li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.job-details strong {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+/* Resume Skills Grid */
+.skills-grid-compact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.skill-category strong {
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.skill-category div {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    .skills-grid-compact {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .header,
+    .footer,
+    .btn,
+    #particles-canvas,
+    .orb {
+        display: none !important;
+    }
+
+    .resume-container {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+        background: none;
+        max-width: 100%;
+        color: black;
+    }
+
+    .resume-container::before {
+        display: none;
+    }
+
+    .resume-header h1 {
+        -webkit-text-fill-color: black;
+        color: black;
+    }
+
+    .resume-header p,
+    .resume-header a,
+    .job-title,
+    .job-company,
+    .job-date,
+    .job-details li,
+    .job-details strong {
+        color: black !important;
+    }
+
+    .job-date {
+        background: none;
+        border: 1px solid #ccc;
+    }
+
+    .resume-section h3 {
+        color: black;
+        border-bottom: 2px solid black;
+        padding-bottom: 0.5rem;
+    }
+
+    .resume-section h3::after {
+        display: none;
+    }
+}
