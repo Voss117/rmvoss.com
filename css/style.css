@@ -915,4 +915,73 @@ img {
     .view-pdf-button {
         display: none !important;
     }
+
+    /* FORCED COMPACT LAYOUT */
+    @page {
+        margin: 0.4in;
+    }
+
+    .resume-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .resume-header {
+        margin-bottom: 0.8rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .resume-header h1 {
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+
+    .resume-header p {
+        margin-top: 0.2rem !important;
+        font-size: 0.9rem;
+    }
+
+    /* Turn the skills grid into 4 columns to save vertical space */
+    .skills-grid-compact {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 0.8rem !important;
+        margin-bottom: 0.5rem;
+    }
+
+    .skill-category div {
+        font-size: 0.8rem !important;
+    }
+
+    .resume-section {
+        margin-bottom: 0.8rem;
+        page-break-inside: avoid;
+    }
+
+    .resume-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+        padding-bottom: 0.2rem;
+        border-bottom: 1px solid #000;
+    }
+
+    .job {
+        margin-bottom: 0.6rem;
+    }
+
+    .job-title {
+        font-size: 1rem;
+    }
+
+    .job-company {
+        font-size: 0.95rem;
+    }
+
+    .job-details li {
+        margin-bottom: 0.15rem;
+        line-height: 1.25;
+        font-size: 0.85rem;
+    }
 }
