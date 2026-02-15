@@ -177,12 +177,54 @@
             </div>
         </section>
 
+        <section id="github" class="section">
+            <div class="container">
+                <h2 class="section-title">Open Source Activity</h2>
+                <p class="section-subtitle"
+                    style="text-align: center; color: var(--color-text-muted); margin-bottom: 2rem;">
+                    Latest contributions from my <a href="https://github.com/Voss117" target="_blank"
+                        style="text-decoration: underline;">GitHub</a>.
+                </p>
+                <div id="github-repos" class="projects-grid">
+                    <!-- Repos loaded via JS -->
+                    <div class="project-card"
+                        style="display: flex; align-items: center; justify-content: center; min-height: 200px;">
+                        <p>Loading GitHub data...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contact" class="section contact">
             <div class="container contact-container">
                 <h2 class="section-title">Let's Work Together</h2>
-                <p class="contact-text">I'm currently open to new opportunities. Whether you have a question or just
-                    want to say hi, I'll try my best to get back to you!</p>
-                <a href="mailto:Robert@rmvoss.com" class="btn btn-primary btn-large">Say Hello</a>
+                <div class="contact-wrapper" style="max-width: 600px; margin: 0 auto;">
+                    <p class="contact-text">I'm currently open to new opportunities. Send me a message directly below!
+                    </p>
+
+                    <form action="https://formspree.io/f/mqkvrqgw" method="POST" class="contact-form"
+                        style="text-align: left;">
+                        <div style="margin-bottom: 1rem;">
+                            <label for="name"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--color-text-muted);">Name</label>
+                            <input type="text" id="name" name="name" required
+                                style="width: 100%; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text);">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="email"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--color-text-muted);">Email</label>
+                            <input type="email" id="email" name="email" required
+                                style="width: 100%; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text);">
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="message"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--color-text-muted);">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                style="width: 100%; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text);"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>

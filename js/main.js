@@ -47,6 +47,38 @@ document.addEventListener('DOMContentLoaded', () => {
         type();
     }
 
+    // --- GitHub API Fetch ---
+    const githubContainer = document.getElementById('github-repos');
+    if (githubContainer) {
+        fetch('https://api.github.com/users/Voss117/repos?sort=updated&per_page=3')
+            .then(response => response.json())
+            .then(data => {
+                if (Array.isArray(data)) {
+                    githubContainer.innerHTML = ''; // Clear loading
+                    data.forEach(repo => {
+                        const card = document.createElement('article');
+                        card.className = 'project-card scroll-hidden';
+                        card.innerHTML = `
+                            <div class="project-content">
+                                <span class="project-tag">${repo.language || 'Code'}</span>
+                                <h3 class="project-title">${repo.name}</h3>
+                                <p class="project-description">${repo.description || 'No description available.'}</p>
+                                <div class="project-links">
+                                    <a href="${repo.html_url}" target="_blank" class="link-text">View Repository &rarr;</a>
+                                </div>
+                            </div>
+                        `;
+                        githubContainer.appendChild(card);
+                        observer.observe(card); // Add to scroll observer
+                    });
+                }
+            })
+            .catch(error => {
+                githubContainer.innerHTML = '<p style="text-align: center; width: 100%;">Unable to load GitHub activity at this time.</p>';
+                console.error('GitHub Fetch Error:', error);
+            });
+    }
+
     // --- Scroll Reveal ---
     const observerOptions = {
         threshold: 0.1,

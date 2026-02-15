@@ -7,67 +7,6 @@
     <title>Resume | Robert Voss</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .resume-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--color-bg-alt);
-            padding: var(--spacing-lg);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--color-border);
-        }
-
-        .resume-header {
-            border-bottom: 2px solid var(--color-border);
-            padding-bottom: var(--spacing-md);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .resume-section {
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .resume-section h3 {
-            color: var(--color-primary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 1.1rem;
-            margin-bottom: var(--spacing-sm);
-            border-left: 3px solid var(--color-accent);
-            padding-left: 1rem;
-        }
-
-        .job {
-            margin-bottom: var(--spacing-md);
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-
-        .job-title {
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        .job-company {
-            color: var(--color-text-muted);
-        }
-
-        .job-date {
-            color: var(--color-text-muted);
-            font-style: italic;
-        }
-
-        .job-details li {
-            margin-bottom: 0.5rem;
-            list-style: disc;
-            margin-left: 1.5rem;
-            color: var(--color-text-muted);
-        }
-    </style>
 </head>
 
 <body>
@@ -94,13 +33,13 @@
                     <h1>Robert Voss</h1>
                     <p style="color: var(--color-text-muted); margin-top: 0.5rem;">
                         Full Stack Developer & Database Administrator<br>
-                        Location: [City, State] | Email: <a href="mailto:Robert@rmvoss.com">Robert@rmvoss.com</a>
+                        Email: <a href="mailto:Robert@rmvoss.com">Robert@rmvoss.com</a>
                     </p>
                 </div>
 
                 <div class="resume-section">
                     <h3>Professional Summary</h3>
-                    <p style="color: var(--color-text-muted);">
+                    <p>
                         Results-oriented Database Administrator with over 10 years of experience transitioning to Full
                         Stack Development. Proven track record in designing, implementing, and maintaining complex
                         database systems. Now applying expertise in data integrity and performance optimization to build
@@ -110,11 +49,11 @@
 
                 <div class="resume-section">
                     <h3>Technical Skills</h3>
-                    <p style="color: var(--color-text-muted);">
-                        <strong>Languages:</strong> JavaScript (ES6+), Python, SQL, HTML5, CSS3<br>
+                    <p>
+                        <strong>Languages:</strong> C#, JavaScript (ES6+), Python, SQL, HTML5, CSS3<br>
                         <strong>Databases:</strong> PostgreSQL, MySQL, SQL Server, MongoDB<br>
-                        <strong>Frameworks:</strong> Node.js, React (Learning), Express<br>
-                        <strong>Tools:</strong> Git, Docker, AWS, Linux
+                        <strong>Frameworks:</strong> .NET Core, Node.js, Express<br>
+                        <strong>Tools:</strong> Git, Docker, Active Directory API, Linux
                     </p>
                 </div>
 
@@ -124,19 +63,20 @@
                     <div class="job">
                         <div class="job-header">
                             <div>
-                                <div class="job-title">Senior Database Administrator</div>
-                                <div class="job-company">Company Name</div>
+                                <div class="job-title">Senior Database Administrator / Full Stack Developer</div>
+                                <div class="job-company">Current Company</div>
                             </div>
                             <div class="job-date">20XX - Present</div>
                         </div>
                         <ul class="job-details">
+                            <li><strong>HR Payroll Automation:</strong> Developed a C# web app integrated with ERP,
+                                automating salary step-increases and saving 240 man-hours/month.</li>
+                            <li><strong>UserForge:</strong> Built a full-stack AD automation tool, reducing account
+                                creation time by 98% (30m to 30s).</li>
                             <li>Led the migration of 50+ database instances to a consolidated environment, reducing
                                 licensing costs by 30%.</li>
                             <li>Optimized query performance for critical financial reporting systems, reducing execution
                                 time by 40%.</li>
-                            <li>Implemented comprehensive backup and disaster recovery strategies, ensuring 99.99%
-                                uptime.</li>
-                            <li>Mentored junior team members on SQL best practices and database design.</li>
                         </ul>
                     </div>
 
@@ -161,7 +101,7 @@
                     <h3>Education</h3>
                     <div class="job">
                         <div class="job-header">
-                            <div class="job-title">Bachelor of Science in Computer Science (or related field)</div>
+                            <div class="job-title">Bachelor of Science in Computer Science</div>
                             <div class="job-date">Year</div>
                         </div>
                         <div class="job-company">University Name</div>
@@ -171,7 +111,7 @@
             </div>
 
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="#" class="btn btn-secondary" onclick="window.print()">Download PDF</a>
+                <button class="btn btn-secondary" onclick="window.print()">Download PDF</button>
             </div>
 
         </div>
