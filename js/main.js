@@ -71,6 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 3D Tilt Effect ---
     document.querySelectorAll('.project-card, .skill-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            // Fast transition while moving to avoid stutter
+            card.style.transition = 'all 0.1s ease';
+        });
+
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
@@ -90,7 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         card.addEventListener('mouseleave', () => {
+            // Smooth, bouncy transition when resetting to default
+            card.style.transition = 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
             card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+            
+            // Remove the inline style after transition completes so CSS takes over again
+            setTimeout(() => {
+                card.style.transition = '';
+            }, 500);
         });
     });
 
@@ -185,3 +197,42 @@ if (mobileMenuBtn && nav) {
         });
     });
 }
+
+// --- Image Lightbox Modal ---
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById("image-modal");
+    if (!modal) return; // Exit if modal doesn't exist on this page
+
+    const modalImg = document.getElementById("modal-img");
+    const captionText = document.getElementById("modal-caption");
+    const triggers = document.querySelectorAll('.lightbox-trigger');
+    const span = document.getElementsByClassName("close-modal")[0];
+
+    // Open Modal
+    triggers.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        });
+    });
+
+    // Close Modal on X click
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close Modal on background click
+    modal.onclick = function(e) {
+        if (e.target !== modalImg) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Close Modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape" && modal.style.display === "block") {
+            modal.style.display = "none";
+        }
+    });
+});

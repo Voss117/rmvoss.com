@@ -93,6 +93,17 @@
     transform-style: preserve-3d;
 }
 
+.hover-zoom {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    z-index: 10;
+    position: relative;
+}
+
 /* Reset & Base */
 * {
     margin: 0;
@@ -918,14 +929,16 @@ img {
 
     /* FORCED COMPACT LAYOUT */
     @page {
-        margin: 0.4in;
+        size: letter portrait;
+        margin: 0.6in 0.8in;
     }
 
     .resume-container {
         width: 100%;
         max-width: 100%;
-        padding: 0 !important;
+        padding: 0 0.5in !important; /* Force padding so text never touches the edge */
         margin: 0 !important;
+        box-sizing: border-box;
     }
 
     .resume-header {
@@ -944,9 +957,9 @@ img {
         font-size: 0.9rem;
     }
 
-    /* Turn the skills grid into 4 columns to save vertical space */
+    /* Turn the skills grid into 2 columns for portrait */
     .skills-grid-compact {
-        grid-template-columns: repeat(4, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 0.8rem !important;
         margin-bottom: 0.5rem;
     }
@@ -957,7 +970,6 @@ img {
 
     .resume-section {
         margin-bottom: 0.8rem;
-        page-break-inside: avoid;
     }
 
     .resume-section h3 {
