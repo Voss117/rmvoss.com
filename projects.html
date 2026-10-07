@@ -141,6 +141,48 @@
                             </div>
                         </div>
                     </article>
+
+                    <!-- Project 6: Change Control -->
+                    <article id="change-control" class="project-card">
+                        <div class="project-content" style="width: 100%;">
+                            <span class="project-tag">DevOps, Workflow Automation & Security</span>
+                            <h2 class="project-title">Enterprise IT Change Control System</h2>
+                            
+                            <!-- Project Image Gallery -->
+                            <div class="project-gallery" style="display: grid; grid-template-columns: 1fr; margin-bottom: 2rem;">
+                                <figure style="margin: 0; text-align: center;">
+                                    <img loading="lazy" src="images/change-control.jpg" alt="Change Control Dashboard Mockup" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px solid var(--color-border); cursor: zoom-in;" class="hover-zoom lightbox-trigger" title="Click to enlarge">
+                                    <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--color-text-muted);">?? Abstracted Change Management Dashboard</figcaption>
+                                </figure>
+                            </div>
+
+                            <p class="project-description">
+                                <strong>Challenge:</strong> With multiple IT teams and departments pushing updates, uncoordinated system changes often led to overlapping maintenance windows, false alarms in the Security Operations Center (SOC), and unexpected network downtime.
+                            </p>
+                            <p class="project-description">
+                                <strong>Solution:</strong> Developed a centralized, highly automated Change Control platform used by IT and expanded county-wide. The system visualizes all upcoming downtime, automatically enforces approval workflows, and seamlessly integrates with monitoring tools and communication channels.
+                            </p>
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Key Features & Impact:</h4>
+                            <ul class="skill-list" style="margin-bottom: 2rem;">
+                                <li><strong>Conflict Detection Dashboard:</strong> Visual timeline dashboard that immediately highlights concurrent or conflicting changes, eliminating accidental downtime overlaps.</li>
+                                <li><strong>Automated SOC & Monitoring Integration:</strong> Automatically pauses alerts in our monitoring systems for affected servers during the specific change window, and notifies the SOC to prevent false positive alarms.</li>
+                                <li><strong>Real-time Ping & Email Alerts:</strong> Integrates directly with the <em>Ping Enterprise Messaging</em> system (which I also built) for instant alerts on change submissions, approvals, and rejections. Automatically generates detailed email templates including rollback plans and timelines.</li>
+                                <li><strong>Director Approval Workflow:</strong> Enforces a strict review chain where directors can review risk factors and approve or deny changes with a single click.</li>
+                                <li><strong>Advanced Analytics:</strong> Granular graphing and metric reporting on change types, requesting departments, and failure/rollback rates over time.</li>
+                            </ul>
+                            <div class="tech-deep-dive"
+                                style="display:none; margin-top: 1.5rem; border-top: 1px solid var(--color-border); padding-top: 1rem;">
+                                <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">Technical Deep Dive</h4>
+                                <ul class="skill-list">
+                                    <li><strong>Architecture:</strong> C# ASP.NET Core backend driving a dynamic, responsive visualization frontend.</li>
+                                    <li><strong>API Integrations:</strong> Extensive use of REST APIs to control third-party monitoring systems and custom webhooks for Ping/Email notifications.</li>
+                                </ul>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-secondary toggle-details">View Technical Details</button>
+                            </div>
+                        </div>
+                    </article>
                     <article id="ping" class="project-card">
                         <div class="project-content" style="width: 100%;">
                             <span class="project-tag">Real-Time Communication</span>
@@ -323,6 +365,7 @@
 <a href="#" id="back-to-top" class="back-to-top" aria-label="Back to top">&#8679;</a>`n</body>
 
 </html>
+
 
 
 
