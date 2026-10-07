@@ -36,7 +36,7 @@
 
     <header class="header">
         <div class="container header-container">
-            <a href="#" class="logo">VOSS</a>
+            <div class="logo-container" style="display: flex; align-items: center; gap: 1rem;"><a href="#" class="logo">VOSS</a><div class="availability-indicator" title="Open to Opportunities"><span class="pulse-dot"></span><span class="availability-text">Available</span></div></div>
             <button class="mobile-menu-btn" aria-label="Toggle navigation">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -253,7 +253,7 @@
 
     <footer class="footer">
         <div class="container footer-container">
-            <p>&copy; 2026 Robert Voss. All rights reserved.</p>
+            <p>&copy; <span id="current-year">2026</span> Robert Voss. All rights reserved.</p>
             <div class="social-links">
                 <a href="https://linkedin.com/in/robert-voss" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
             </div>
@@ -262,7 +262,8 @@
 
     <script src="js/particles.js"></script>
     <script src="js/main.js"></script>
-</body>
+<a href="#" id="back-to-top" class="back-to-top" aria-label="Back to top">&#8679;</a>`n</body>
 
 </html>
 <!-- Force rebuild -->
+
