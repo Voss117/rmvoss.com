@@ -223,21 +223,21 @@
                             <!-- Project Image Gallery -->
                             <div class="project-gallery" style="display: grid; grid-template-columns: 1fr; margin-bottom: 2rem;">
                                 <figure style="margin: 0; text-align: center;">
-                                    <img loading="lazy" src="images/ai-server.jpg" alt="Enterprise AI Server Architecture" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px solid var(--color-border); cursor: zoom-in;" class="hover-zoom lightbox-trigger" title="Click to enlarge">
+                                    <img loading="lazy" src="images/ai-server.jpg" alt="Enterprise AI Server Architecture" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px solid var(--color-border); cursor: zoom-in;" class="hover-zoom lightbox-trigger" title="Click to enlarge">
                                     <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--color-text-muted);">🖥️ On-Premises Dell Server Cluster (4x NVIDIA A100 GPUs)</figcaption>
                                 </figure>
                             </div>
 
                             <p class="project-description">
-                                <strong>Challenge:</strong> The organization required an internal, air-gapped AI environment to analyze sensitive corporate documents, assist in coding and IT troubleshooting, and prevent external data leakage to public models.
+                                <strong>Challenge:</strong> The county government required a secure, air-gapped AI environment to analyze sensitive documents and prevent external data leakage to public models. Crucially, the solution needed to serve multiple distinct departments (Legal, IT, HR) without cross-contamination of highly specialized knowledge.
                             </p>
                             <p class="project-description">
-                                <strong>Solution:</strong> Architected and deployed a massive on-premises AI server cluster using Docker, Ollama, and OpenWebUI. I custom-tuned an open-source <code>116.8B</code> parameter model to strictly adhere to corporate workflows, integrating powerful agentic reasoning.
+                                <strong>Solution:</strong> Architected and deployed a massive on-premises AI server cluster for the entire county using Docker, Ollama, and OpenWebUI. I custom-tuned an open-source <code>116.8B</code> parameter model into several specialized variants, providing dedicated secure models for Legal, IT, and HR.
                             </p>
                             <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Key Features & Impact:</h4>
                             <ul class="skill-list" style="margin-bottom: 2rem;">
-                                <li><strong>Multimodal Vision:</strong> Integrated <code>LLaVA</code> and <code>Llama Vision</code>, allowing the AI to ingest user screenshots for rapid IT troubleshooting and contextual analysis.</li>
-                                <li><strong>Agentic RAG & Web Search:</strong> Built an intelligent routing system where the model automatically determines whether to analyze uploaded documents or perform real-time web searches based on the prompt.</li>
+                                <li><strong>Multimodal Vision:</strong> Integrated <code>LLaVA</code> and <code>Llama Vision</code>, allowing the AI to ingest screenshots and documents across all departments for rapid contextual analysis and troubleshooting.</li>
+                                <li><strong>Specialized RAG & Routing:</strong> Deployed distinct document repositories for Lawyers, IT, and HR. The AI intelligently routes queries to the correct domain-specific repository or performs web searches, drastically increasing efficiency and eliminating AI hallucinations.</li>
                                 <li><strong>Natural Voice AI:</strong> Implemented the <code>tts-1</code> engine for fluid, human-sounding voice conversations with the assistant.</li>
                             </ul>
                             <div class="tech-deep-dive"
@@ -280,4 +280,5 @@
 <a href="#" id="back-to-top" class="back-to-top" aria-label="Back to top">&#8679;</a>`n</body>
 
 </html>
+
 
