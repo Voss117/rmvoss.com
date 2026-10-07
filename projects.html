@@ -98,6 +98,49 @@
                             </div>
                         </div>
                     </article>
+
+                    <!-- Project 5: ERP System -->
+                    <article id="erp-system" class="project-card">
+                        <div class="project-content" style="width: 100%;">
+                            <span class="project-tag">Enterprise Architecture & FinTech</span>
+                            <h2 class="project-title">Custom Financial ERP & Procurement System</h2>
+                            
+                            <!-- Project Image Gallery -->
+                            <div class="project-gallery" style="display: grid; grid-template-columns: 1fr; margin-bottom: 2rem;">
+                                <figure style="margin: 0; text-align: center;">
+                                    <img loading="lazy" src="images/erp-system.jpg" alt="Enterprise Financial Dashboard Mockup" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px solid var(--color-border); cursor: zoom-in;" class="hover-zoom lightbox-trigger" title="Click to enlarge">
+                                    <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--color-text-muted);">?? Abstracted UI Representation (Real system is secured and confidential)</figcaption>
+                                </figure>
+                            </div>
+
+                            <p class="project-description">
+                                <strong>Challenge:</strong> The organization needed a centralized, highly secure Enterprise Resource Planning (ERP) system to handle massive financial operations including Treasurer ledgers, paystubs, and decentralized Procurement card (p-card) transactions across all departments.
+                            </p>
+                            <p class="project-description">
+                                <strong>Solution:</strong> I single-handedly architected and am actively developing a comprehensive, live production ERP. The system securely ingests raw bank files, normalizes vendor data via custom rules engines, and provides sleek web interfaces for decentralized departmental data entry, splitting transactions, and reconciliation.
+                            </p>
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Key Features & Impact:</h4>
+                            <ul class="skill-list" style="margin-bottom: 2rem;">
+                                <li><strong>Treasurer & Accounting Module:</strong> Accurately tracks the organization's ledgers, checks, fund transfers, and generates secure paystubs.</li>
+                                <li><strong>Automated Data Normalization:</strong> Built a data pipeline (functioning similarly to email rules) that ingests raw bank CSVs and automatically normalizes disparate vendor codes (e.g. AMZ018486) into clean entities (e.g. Amazon).</li>
+                                <li><strong>Decentralized P-Card Reconciliation:</strong> Created a secure web portal for cardholders to log in, define purchases, split transactions across multiple fund line items, and finalize historical reconciliations.</li>
+                                <li><strong>Immutable Auditing:</strong> Every data entry and reconciliation is securely stored in the ERP database with strict tracking of <em>who</em> made the change and <em>when</em>.</li>
+                                <li><strong>Admin & Fuel Tracking Dashboards:</strong> Designed high-level reporting dashboards for admins to monitor monthly transaction volumes, pending reconciliations, and specialized dashboards for county vehicle fuel tracking (gallons used per user/vehicle).</li>
+                            </ul>
+                            <div class="tech-deep-dive"
+                                style="display:none; margin-top: 1.5rem; border-top: 1px solid var(--color-border); padding-top: 1rem;">
+                                <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">Technical Deep Dive</h4>
+                                <ul class="skill-list">
+                                    <li><strong>Architecture:</strong> Complex relational database architecture designed to handle strict financial compliance and immutable transaction ledgers.</li>
+                                    <li><strong>Data Pipelines:</strong> Custom parsing and rule-engine logic to sanitize and map external financial institution data to internal records.</li>
+                                    <li><strong>Security First:</strong> Role-Based Access Control (RBAC) ensuring department heads only see their funds, while providing global oversight to the Treasurer and Procurement admins.</li>
+                                </ul>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-secondary toggle-details">View Technical Details</button>
+                            </div>
+                        </div>
+                    </article>
                     <article id="ping" class="project-card">
                         <div class="project-content" style="width: 100%;">
                             <span class="project-tag">Real-Time Communication</span>
@@ -280,6 +323,7 @@
 <a href="#" id="back-to-top" class="back-to-top" aria-label="Back to top">&#8679;</a>`n</body>
 
 </html>
+
 
 
 
