@@ -73,10 +73,10 @@
                             </div>
 
                             <p class="project-description">
-                                <strong>Challenge:</strong> The county government required a secure, air-gapped AI environment to analyze sensitive documents and prevent external data leakage to public models. Crucially, the solution needed to serve multiple distinct departments (Legal, IT, HR) without cross-contamination of highly specialized knowledge.
+                                <strong>Challenge:</strong> The organization required a secure, air-gapped AI environment to analyze sensitive documents and prevent external data leakage to public models. Crucially, the solution needed to serve multiple distinct departments (Legal, IT, HR) without cross-contamination of highly specialized knowledge.
                             </p>
                             <p class="project-description">
-                                <strong>Solution:</strong> Architected and deployed a massive on-premises AI server cluster for the entire county using Docker, Ollama, and OpenWebUI. I custom-tuned an open-source <code>116.8B</code> parameter model into several specialized variants, providing dedicated secure models for Legal, IT, and HR.
+                                <strong>Solution:</strong> Architected and deployed a massive on-premises AI server cluster for the entire enterprise using Docker, Ollama, and OpenWebUI. I custom-tuned an open-source <code>116.8B</code> parameter model into several specialized variants, providing dedicated secure models for Legal, IT, and HR.
                             </p>
                             <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Key Features & Impact:</h4>
                             <ul class="skill-list" style="margin-bottom: 2rem;">
@@ -125,7 +125,7 @@
                                 <li><strong>Automated Data Normalization:</strong> Built a data pipeline (functioning similarly to email rules) that ingests raw bank CSVs and automatically normalizes disparate vendor codes (e.g. AMZ018486) into clean entities (e.g. Amazon).</li>
                                 <li><strong>Decentralized P-Card Reconciliation:</strong> Created a secure web portal for cardholders to log in, define purchases, split transactions across multiple fund line items, and finalize historical reconciliations.</li>
                                 <li><strong>Immutable Auditing:</strong> Every data entry and reconciliation is securely stored in the ERP database with strict tracking of <em>who</em> made the change and <em>when</em>.</li>
-                                <li><strong>Admin & Fuel Tracking Dashboards:</strong> Designed high-level reporting dashboards for admins to monitor monthly transaction volumes, pending reconciliations, and specialized dashboards for county vehicle fuel tracking (gallons used per user/vehicle).</li>
+                                <li><strong>Admin & Fuel Tracking Dashboards:</strong> Designed high-level reporting dashboards for admins to monitor monthly transaction volumes, pending reconciliations, and specialized dashboards for fleet vehicle fuel tracking (gallons used per user/vehicle).</li>
                             </ul>
                             <div class="tech-deep-dive"
                                 style="display:none; margin-top: 1.5rem; border-top: 1px solid var(--color-border); padding-top: 1rem;">
@@ -157,14 +157,14 @@
                             </div>
 
                             <p class="project-description">
-                                <strong>Challenge:</strong> With various county departments (e.g., the GIS team in the Assessor's Office) pushing updates that affect shared IT infrastructure, uncoordinated changes often led to overlapping maintenance windows, false alarms in the Security Operations Center (SOC), and unexpected downtime.
+                                <strong>Challenge:</strong> With various enterprise departments (e.g., the GIS team in the Assessor's Office) pushing updates that affect shared IT infrastructure, uncoordinated changes often led to overlapping maintenance windows, false alarms in the Security Operations Center (SOC), and unexpected downtime.
                             </p>
                             <p class="project-description">
-                                <strong>Solution:</strong> Developed a centralized, highly automated Change Control platform used by IT and expanded county-wide. The system visualizes all upcoming downtime, automatically enforces approval workflows, and seamlessly integrates with monitoring tools and communication channels.
+                                <strong>Solution:</strong> Developed a centralized, highly automated Change Control platform used by IT and expanded enterprise-wide. The system visualizes all upcoming downtime, automatically enforces approval workflows, and seamlessly integrates with monitoring tools and communication channels.
                             </p>
                             <h4 style="margin-bottom: 0.5rem; color: var(--color-text);">Key Features & Impact:</h4>
                             <ul class="skill-list" style="margin-bottom: 2rem;">
-                                <li><strong>Enterprise Cost Savings:</strong> By building this custom solution internally, the county avoids an estimated <strong>$75,000 to $100,000+ per year</strong> in comparable enterprise ITSM (IT Service Management) licensing fees.</li>
+                                <li><strong>Enterprise Cost Savings:</strong> By building this custom solution internally, the organization avoids an estimated <strong>$75,000 to $100,000+ per year</strong> in comparable enterprise ITSM (IT Service Management) licensing fees.</li>
                                 <li><strong>Real-Time SignalR Dashboard:</strong> Visual timeline powered by SignalR WebSockets instantly pushes approved changes to the live dashboard, immediately highlighting conflicts and ensuring nobody is blindsided by maintenance.</li>
                                 <li><strong>Smart Departmental Routing:</strong> Reads dependency tags from our monitoring environment to automatically email specific stakeholders (e.g., Emergency Management, Assessors) whenever a system they rely on (like ARC mapping) is scheduled for downtime.</li>
                                 <li><strong>Automated SOC & Monitoring Integration:</strong> Automatically pauses alerts in our monitoring systems for affected servers during the change window and notifies the SOC to prevent false positive alarms.</li>
@@ -366,6 +366,7 @@
 <a href="#" id="back-to-top" class="back-to-top" aria-label="Back to top">&#8679;</a></body>
 
 </html>
+
 
 
 
