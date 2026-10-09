@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <linearGradient id="vossGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&amp;display=swap');
+      .logo-text {
+        font-family: 'Inter', sans-serif;
+        font-size: 45px;
+        font-weight: 900;
+        fill: url(#vossGradient);
+        letter-spacing: -2px;
+      }
+    </style>
+  </defs>
+  <text x="0" y="45" class="logo-text">VOSS</text>
+</svg>
