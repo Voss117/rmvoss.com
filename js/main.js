@@ -266,3 +266,102 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+// --- Toast Notification Helper ---
+function showToast(message) {
+    let toast = document.getElementById('toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'toast';
+        toast.className = 'toast';
+        document.body.appendChild(toast);
+    }
+    toast.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>${message}</span>`;
+    toast.classList.add('show');
+    clearTimeout(window._toastTimeout);
+    window._toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3200);
+}
+window.showToast = showToast;
+
+// --- Quick Actions: Copy Email & Save Contact (vCard) ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Copy Email
+    document.querySelectorAll('.copy-email-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = 'Robert@rmvoss.com';
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(email).then(() => {
+                    showToast('Email copied to clipboard! (' + email + ')');
+                }).catch(() => {
+                    fallbackCopy(email);
+                });
+            } else {
+                fallbackCopy(email);
+            }
+        });
+    });
+
+    function fallbackCopy(text) {
+        try {
+            const temp = document.createElement('input');
+            temp.setAttribute('value', text);
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand('copy');
+            document.body.removeChild(temp);
+            showToast('Email copied to clipboard! (' + text + ')');
+        } catch (err) {
+            showToast('Email: ' + text);
+        }
+    }
+
+    // Save Contact (vCard)
+    document.querySelectorAll('.save-contact-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const vcard = [
+                'BEGIN:VCARD',
+                'VERSION:3.0',
+                'N:Voss;Robert;;;',
+                'FN:Robert Voss',
+                'ORG:Washington County Government / Senior Systems Architect',
+                'TITLE:Senior Full Stack Developer & Systems Architect',
+                'EMAIL;type=INTERNET;type=WORK:Robert@rmvoss.com',
+                'URL:https://rmvoss.com',
+                'X-SOCIALPROFILE;type=linkedin:https://linkedin.com/in/robert-voss',
+                'NOTE:Enterprise Systems & AI Architect. Specializing in high-throughput C# backend architectures, air-gapped AI server clusters, and financial ERP systems.',
+                'END:VCARD'
+            ].join('\r\n');
+
+            const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.setAttribute('download', 'Robert_Voss.vcf');
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast('Contact card downloaded! (Robert_Voss.vcf)');
+        });
+    });
+
+
+
+    // Accessibility for lightbox images
+    const lightboxTriggers = document.querySelectorAll('.lightbox-trigger');
+    lightboxTriggers.forEach(img => {
+        img.setAttribute('tabindex', '0');
+        img.setAttribute('role', 'button');
+        img.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                img.click();
+            }
+        });
+    });
+});

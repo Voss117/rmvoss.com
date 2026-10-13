@@ -21,8 +21,14 @@
     <meta property="twitter:description" content="Professional resume of Robert Voss, Full Stack Developer and Database Administrator.">
     <meta property="twitter:image" content="https://rmvoss.com/images/profile.jpg">
 
-    <link rel="stylesheet" href="css/style.css?v=2">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://rmvoss.com/resume.html">
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/voss-logo.svg">
+    <link rel="alternate icon" type="image/png" href="images/voss-logo.png">
+    <link rel="apple-touch-icon" href="images/voss-logo.png">
 </head>
 
 <body>
@@ -39,11 +45,12 @@
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#skills">Skills</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="resume.html" class="active">Resume</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
+                    <li class="mobile-only-cta"><a href="index.html#contact" class="btn btn-primary" style="display: inline-block; padding: 0.5rem 1.25rem;">Get in Touch</a></li>
                 </ul>
             </nav>
-            <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
+            <a href="index.html#contact" class="btn btn-primary header-cta">Get in Touch</a>
         </div>
     </header>
 
@@ -81,7 +88,7 @@
                         </div>
                         <ul class="job-details">
                             <li><strong>Enterprise AI Infrastructure:</strong> Architected a private, air-gapped Dell server cluster (4x NVIDIA A100 GPUs) deploying specialized local language models (LLaVA, 116.8B params) and RAG environments for Legal, IT, and HR departments.</li>
-                            <li><strong>Financial ERP & Procurement System:</strong> Built a live, comprehensive C#/SQL ERP system that normalizes bank transaction pipelines, processes enterprise ledgers, and handles decentralized P-Card reconciliations, saving the organization an estimated $2M/year in comparable licensing and ensuring 99.9% uptime.</li>
+                            <li><strong>Financial ERP & Procurement System:</strong> Built a live, comprehensive C#/SQL ERP system that normalizes bank transaction pipelines, processes enterprise ledgers, and handles decentralized P-Card reconciliations, saving the organization an estimated $2M/year in comparable licensing and ensuring 99.999% uptime.</li>
                             <li><strong>IT Change Control Platform:</strong> Developed an enterprise SignalR/C# change management dashboard that automates SOC/monitoring alerts, handles director approval workflows, and provides real-time conflict detection across shared IT resources, saving ~$75k+/year.</li>
                             <li><strong>Ping (Enterprise Messaging System):</strong> Architected and built a C#/SignalR
                                 real-time communications platform to replace Slack, saving the organization
@@ -169,8 +176,10 @@
 
             </div>
 
-            <div style="text-align: center; margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
+            <div style="text-align: center; margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
                 <button class="btn btn-primary" onclick="window.print()">Print / Save as PDF</button>
+                <button type="button" class="btn btn-secondary save-contact-btn">Save Contact (vCard)</button>
+                <button type="button" class="btn btn-secondary copy-email-btn">Copy Email</button>
             </div>
 
         </div>
@@ -184,7 +193,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/main.js?v=3"></script>
+    <script src="js/main.js?v=4"></script>
 <a href="#" id="back-to-top" class="back-to-top" aria-label="Back to top">&#8679;</a></body>
 
 </html>

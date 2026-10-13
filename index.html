@@ -1,338 +1,908 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <!-- Force Rebuild: 2026-02-15 -->
 
+
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Robert Voss | Full Stack Developer</title>
-    <meta name="description" content="Portfolio of Robert Voss, a seasoned Database Administrator turned Full Stack Developer. Specializing in robust backend systems and modern frontend experiences.">
-    
+
+    <meta name="description"
+        content="Portfolio of Robert Voss, a seasoned Database Administrator turned Full Stack Developer. Specializing in robust backend systems and modern frontend experiences.">
+
+
+
     <!-- Open Graph / LinkedIn / Facebook -->
+
     <meta property="og:type" content="website">
+
     <meta property="og:url" content="https://rmvoss.com/">
+
     <meta property="og:title" content="Robert Voss | Full Stack Developer">
-    <meta property="og:description" content="Senior Full Stack Developer specializing in robust backend systems and modern frontend experiences.">
+
+    <meta property="og:description"
+        content="Senior Full Stack Developer specializing in robust backend systems and modern frontend experiences.">
+
     <meta property="og:image" content="https://rmvoss.com/images/profile.jpg">
 
+
+
     <!-- Twitter -->
+
     <meta property="twitter:card" content="summary_large_image">
+
     <meta property="twitter:url" content="https://rmvoss.com/">
+
     <meta property="twitter:title" content="Robert Voss | Full Stack Developer">
-    <meta property="twitter:description" content="Senior Full Stack Developer specializing in robust backend systems and modern frontend experiences.">
+
+    <meta property="twitter:description"
+        content="Senior Full Stack Developer specializing in robust backend systems and modern frontend experiences.">
+
     <meta property="twitter:image" content="https://rmvoss.com/images/profile.jpg">
 
-    <link rel="stylesheet" href="css/style.css?v=2">
+
+
+    <link rel="canonical" href="https://rmvoss.com/">
+
+    <link rel="stylesheet" href="css/style.css?v=4">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2322d3ee%22>V</text></svg>">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml" href="images/voss-logo.svg">
+
+    <link rel="alternate icon" type="image/png" href="images/voss-logo.png">
+
+    <link rel="apple-touch-icon" href="images/voss-logo.png">
+
 </head>
 
+
+
 <body>
+
     <canvas id="particles-canvas"></canvas>
+
     <div class="orb orb-1"></div>
+
     <div class="orb orb-2"></div>
 
+
+
     <header class="header">
+
         <div class="container header-container">
-            <div class="logo-container" style="display: flex; align-items: center; gap: 1rem;"><a href="#" class="logo">VOSS</a><div class="availability-indicator" title="Open to Opportunities"><span class="pulse-dot"></span><span class="availability-text">Available</span></div></div>
+
+            <div class="logo-container" style="display: flex; align-items: center; gap: 1rem;"><a href="#"
+                    class="logo">VOSS</a>
+
+                <div class="availability-indicator" title="Open to Opportunities"><span class="pulse-dot"></span><span
+                        class="availability-text">Available</span></div>
+
+            </div>
+
             <button class="mobile-menu-btn" aria-label="Toggle navigation">
+
                 <span class="hamburger-line"></span>
+
                 <span class="hamburger-line"></span>
+
                 <span class="hamburger-line"></span>
+
             </button>
+
             <nav class="nav">
+
                 <ul class="nav-list">
+
                     <li><a href="#about">About</a></li>
+
                     <li><a href="#skills">Skills</a></li>
+
                     <li><a href="#projects">Projects</a></li>
+
                     <li><a href="resume.html">Resume</a></li>
+
                     <li><a href="#contact">Contact</a></li>
+
+                    <li class="mobile-only-cta"><a href="#contact" class="btn btn-primary"
+                            style="display: inline-block; padding: 0.5rem 1.25rem;">Get in Touch</a></li>
+
                 </ul>
+
             </nav>
-            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+
+            <a href="#contact" class="btn btn-primary header-cta">Get in Touch</a>
+
         </div>
+
     </header>
+
+
 
     <main>
 
 
 
+
+
+
+
         <section class="hero">
+
             <div class="container hero-container">
+
                 <div class="hero-content">
+
                     <h1 class="hero-title">
+
                         Architecting <span class="text-gradient">Scalable</span><br>
+
                         <span id="typewriter" class="typewriter-text"></span><span class="cursor">|</span>
+
                     </h1>
+
                     <p class="hero-subtitle scroll-hidden">Hi, I'm <strong>Robert Voss</strong>. I build robust,
-                        data-intensive web solutions by combining 10+ years of comprehensive backend engineering
+
+                        data-intensive web solutions by combining more than a decade of comprehensive backend
+                        engineering
+
                         with
+
                         modern frontend design.</p>
-                                        <div class="hero-social" style="margin-bottom: 2rem; display: flex; gap: 1rem; align-items: center;">
-                        <a href="https://linkedin.com/in/robert-voss" target="_blank" rel="noopener noreferrer" style="color: var(--color-text-muted); font-size: 1.5rem; transition: color 0.3s ease; text-decoration: none;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'" aria-label="LinkedIn" title="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+
+                    <div class="hero-social">
+
+                        <a href="https://linkedin.com/in/robert-voss" target="_blank" rel="noopener noreferrer"
+                            style="color: var(--color-text-muted); font-size: 1.5rem; transition: color 0.3s ease; text-decoration: none;"
+                            onmouseover="this.style.color='var(--color-primary)'"
+                            onmouseout="this.style.color='var(--color-text-muted)'" aria-label="LinkedIn"
+                            title="LinkedIn">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+
+                                </path>
+
+                                <rect x="2" y="9" width="4" height="12"></rect>
+
+                                <circle cx="4" cy="4" r="2"></circle>
+
+                            </svg>
+
                         </a>
-                        <a href="mailto:Robert@rmvoss.com" style="color: var(--color-text-muted); font-size: 1.5rem; transition: color 0.3s ease; text-decoration: none;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'" aria-label="Email" title="Email">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+
+                        <a href="mailto:Robert@rmvoss.com"
+                            style="color: var(--color-text-muted); font-size: 1.5rem; transition: color 0.3s ease; text-decoration: none;"
+                            onmouseover="this.style.color='var(--color-primary)'"
+                            onmouseout="this.style.color='var(--color-text-muted)'" aria-label="Email" title="Email">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+
+                                </path>
+
+                                <polyline points="22,6 12,13 2,6"></polyline>
+
+                            </svg>
+
                         </a>
+
                     </div>
 
-                    <div class="hero-actions scroll-hidden">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+
+
+                    <div class="hero-quick-actions">
+
+                        <button type="button" class="quick-action-btn save-contact-btn"
+                            title="Download Robert Voss vCard for iOS/Android address book">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+
+                                <polyline points="7 10 12 15 17 10"></polyline>
+
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+
+                            </svg>
+
+                            <span>Save Contact (vCard)</span>
+
+                        </button>
+
+                        <button type="button" class="quick-action-btn copy-email-btn"
+                            title="Copy Robert@rmvoss.com to clipboard">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+
+                            </svg>
+
+                            <span>Copy Email</span>
+
+                        </button>
+
                     </div>
+
+
+
+
+
+                    <!-- Executive Impact Bar -->
+
+                    <div class="impact-bar scroll-hidden">
+
+                        <div class="impact-card">
+
+                            <div class="impact-number">$2.1M+</div>
+
+                            <div class="impact-label">Annual Cost Savings</div>
+
+                        </div>
+
+                        <div class="impact-card">
+
+                            <div class="impact-number">10+ Yrs</div>
+
+                            <div class="impact-label">Dev-Ops Experience</div>
+
+                        </div>
+
+                        <div class="impact-card">
+
+                            <div class="impact-number">AI Architect</div>
+
+                            <div class="impact-label">Enterprise AI Solutions</div>
+
+                        </div>
+
+                        <div class="impact-card">
+
+                            <div class="impact-number">99.999%</div>
+
+                            <div class="impact-label">Mission-Critical Uptime</div>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </section>
+
+
 
         <section id="about" class="section about">
+
             <div class="container">
+
                 <h2 class="section-title">About Me</h2>
+
                 <div class="about-content">
+
                     <div class="about-image-container scroll-hidden">
+
                         <img src="images/profile.jpg" alt="Robert Voss" class="about-image">
+
                     </div>
+
                     <div class="about-text scroll-hidden">
+
                         <p>I am a <strong>Senior Full Stack Developer</strong> with a unique structural advantage:
+
                             over
+
                             a decade of elite database and backend engineering experience.</p>
+
                         <p>While many developers treat the database as a "black box," I architect systems from the
+
                             data
+
                             up—ensuring that every application I build is not only visually engaging but
+
                             fundamentally
+
                             scalable, secure, and performant. My expertise spans the full ecosystem, from designing
+
                             complex SQL schemas to crafting responsive React/JS interfaces.</p>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
+
+
+
 
 
         <section id="projects" class="section projects">
+
             <div class="container">
+
                 <h2 class="section-title">Featured Projects</h2>
+
                 <div class="projects-grid">
+
                     <!-- New Full Stack Projects -->
 
+
+
                     <article class="project-card featured">
+
                         <div class="project-content">
+
                             <span class="project-tag">AI Infrastructure & MLOps</span>
+
                             <h3 class="project-title">Enterprise AI Infrastructure</h3>
-                            <p class="project-description">Architected a private, air-gapped Dell server cluster powered by 4x NVIDIA A100 GPUs for multimodal RAG workflows.</p>
+
+                            <p class="project-description">Architected a private, air-gapped Dell server cluster powered
+
+                                by 4x NVIDIA A100 GPUs for multimodal RAG workflows.</p>
+
                             <ul class="project-tech">
+
                                 <li>NVIDIA A100</li>
+
                                 <li>Ollama</li>
+
                                 <li>Docker</li>
+
                             </ul>
+
                             <div class="project-links">
+
                                 <a href="projects.html#ai-server" class="link-text">View Details &rarr;</a>
+
                             </div>
+
                         </div>
+
                     </article>
 
+
+
                     <article class="project-card featured">
+
                         <div class="project-content">
+
                             <span class="project-tag">Enterprise Architecture & FinTech</span>
+
                             <h3 class="project-title">Custom Financial ERP System</h3>
-                            <p class="project-description">Built a highly reliable production ERP system that replaced a legacy vendor, saving the organization an estimated $2M/year in enterprise licensing while drastically improving system uptime.</p>
+
+                            <p class="project-description">Built a highly reliable production ERP system that replaced a
+
+                                legacy vendor, saving the organization an estimated $2M/year in enterprise licensing
+
+                                while drastically improving system uptime.</p>
+
                             <ul class="project-tech">
+
                                 <li>C# / ASP.NET</li>
+
                                 <li>SQL Server Backend</li>
+
                                 <li>Legacy Integrations</li>
+
                             </ul>
+
                             <div class="project-links">
+
                                 <a href="projects.html#erp-system" class="link-text">View Details &rarr;</a>
+
                             </div>
+
                         </div>
+
                     </article>
 
+
+
                     <article class="project-card featured">
+
                         <div class="project-content">
+
                             <span class="project-tag">DevOps & Automation</span>
+
                             <h3 class="project-title">Enterprise Change Control System</h3>
-                            <p class="project-description">Built a centralized change management platform that prevents system downtime conflicts, automates SOC notifications, and manages director-level approval workflows.</p>
+
+                            <p class="project-description">Built a centralized change management platform that prevents
+
+                                system downtime conflicts, automates SOC notifications, and manages director-level
+
+                                approval workflows.</p>
+
                             <ul class="project-tech">
+
                                 <li>C# / .NET</li>
+
                                 <li>SignalR (Real-Time)</li>
+
                                 <li>Smart Alert Routing</li>
+
                             </ul>
+
                             <div class="project-links">
+
                                 <a href="projects.html#change-control" class="link-text">View Details &rarr;</a>
+
                             </div>
+
                         </div>
+
                     </article>
+
                     <article id="ping" class="project-card featured">
+
                         <div class="project-content">
+
                             <span class="project-tag">Real-Time Systems</span>
+
                             <h3 class="project-title">Ping: Enterprise Messaging</h3>
+
                             <p class="project-description">Custom C#/SignalR messaging platform built to replace
+
                                 Slack,
+
                                 saving $100k/year while meeting strict government compliance (FOIA/ADA).</p>
+
                             <ul class="project-tech">
+
                                 <li>C# / SignalR</li>
+
                                 <li>SQL Server</li>
+
                                 <li>WebSockets</li>
+
                             </ul>
+
                             <div class="project-links">
+
                                 <a href="projects.html#ping" class="link-text">View Details &rarr;</a>
+
                             </div>
+
                         </div>
+
                     </article>
 
+
+
                     <article class="project-card featured">
+
                         <div class="project-content">
+
                             <span class="project-tag">Automation</span>
+
                             <h3 class="project-title">UserForge</h3>
+
                             <p class="project-description">AD Account Automation tool that reduced creation time by
+
                                 98%
+
                                 (30m to 30s) and enhanced security logging.</p>
+
                             <ul class="project-tech">
+
                                 <li>C# / ASP.NET</li>
+
                                 <li>Active Directory</li>
+
                                 <li>Security</li>
+
                             </ul>
+
                             <div class="project-links">
+
                                 <a href="projects.html#userforge" class="link-text">View Details &rarr;</a>
+
                             </div>
+
                         </div>
+
                     </article>
 
+
+
                     <article class="project-card featured">
+
                         <div class="project-content">
+
                             <span class="project-tag">Workflow Automation & Security</span>
+
                             <h3 class="project-title">HR Payroll & Document System</h3>
+
                             <p class="project-description">C# Web App that automates salary step-increases and
+
                                 provides a secure, self-service document portal.</p>
+
                             <ul class="project-tech">
+
                                 <li>C# / .NET</li>
+
                                 <li>PostgreSQL</li>
+
                                 <li>ERP API</li>
+
                             </ul>
+
                             <div class="project-links">
+
                                 <a href="projects.html#hr-system" class="link-text">View Details &rarr;</a>
+
                             </div>
+
                         </div>
+
                     </article>
+
+
+
+
 
 
 
                 </div>
+
             </div>
+
         </section>
+
+
+
 
 
         <section id="skills" class="section skills">
+
             <div class="container">
+
                 <h2 class="section-title">Technical Skills</h2>
+
                 <div class="skills-grid">
+
+                    <!-- AI Infrastructure & MLOps -->
+
                     <div class="skill-card">
-                        <h3>Frontend & Reporting</h3>
+
+                        <div class="skill-card-header">
+
+                            <div class="skill-icon" aria-hidden="true">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+
+                                    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+
+                                    <rect x="9" y="9" width="6" height="6"></rect>
+
+                                    <path d="M9 1v3"></path>
+
+                                    <path d="M15 1v3"></path>
+
+                                    <path d="M9 20v3"></path>
+
+                                    <path d="M15 20v3"></path>
+
+                                    <path d="M20 9h3"></path>
+
+                                    <path d="M20 14h3"></path>
+
+                                    <path d="M1 9h3"></path>
+
+                                    <path d="M1 14h3"></path>
+
+                                </svg>
+
+                            </div>
+
+                            <h3>AI Infrastructure & MLOps</h3>
+
+                        </div>
+
                         <ul class="skill-list">
-                            <li>HTML5 & CSS3</li>
-                            <li>JavaScript (ES6+) / React</li>
-                            <li>SSRS (Reporting Services)</li>
-                            <li>Responsive Design (ADA)</li>
-                            <li>Data Visualization</li>
-                            <li>Modern UI/UX Principles</li>
-                            <li>AJAX & WebSockets</li>
+
+                            <li>4x NVIDIA A100 GPU Clusters</li>
+
+                            <li>Docker Containerization</li>
+
+                            <li>Ollama & OpenWebUI</li>
+
+                            <li>Multimodal Vision (LLaVA)</li>
+
+                            <li>PEFT & LoRA Model Fine-Tuning</li>
+
+                            <li>Domain-Specific RAG Routing</li>
+
+                            <li>Air-Gapped Compliance & Privacy</li>
+
                         </ul>
+
                     </div>
+
+
+
+                    <!-- Backend Architecture -->
+
                     <div class="skill-card">
-                        <h3>Backend</h3>
+
+                        <div class="skill-card-header">
+
+                            <div class="skill-icon" aria-hidden="true">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+
+                                </svg>
+
+                            </div>
+
+                            <h3>Backend Architecture</h3>
+
+                        </div>
+
                         <ul class="skill-list">
+
                             <li>C# / .NET Core</li>
-                            <li>SignalR (Real-Time)</li>
+
+                            <li>SignalR (Real-Time Communications)</li>
+
                             <li>Node.js & Python</li>
+
                             <li>RESTful API Design</li>
+
                             <li>VBA / VB / Automation</li>
+
                             <li>System Integration / IIS</li>
-                            <li>Auth & Security (SAML/OAuth)</li>
+
+                            <li>Auth & Security (SAML / OAuth)</li>
+
                         </ul>
+
                     </div>
+
+
+
+                    <!-- Database Systems & DBA -->
+
                     <div class="skill-card">
-                        <h3>Database</h3>
+
+                        <div class="skill-card-header">
+
+                            <div class="skill-icon" aria-hidden="true">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+
+                                </svg>
+
+                            </div>
+
+                            <h3>Database Systems & DBA</h3>
+
+                        </div>
+
                         <ul class="skill-list">
-                            <li>SQL Server / T-SQL</li>
-                            <li>Database Architecture</li>
-                            <li>Performance Tuning</li>
-                            <li>ETL / SSIS & Data Migration</li>
-                            <li>Stored Procedures & Functions</li>
-                            <li>Data Warehousing</li>
-                            <li>Security & Auditing (FOIA)</li>
+
+                            <li>SQL Server / T-SQL Optimization</li>
+
+                            <li>Database Architecture & Schema Design</li>
+
+                            <li>Performance Tuning & Query Execution Plans</li>
+
+                            <li>ETL / SSIS & Enterprise Data Migration</li>
+
+                            <li>Stored Procedures & Complex Functions</li>
+
+                            <li>Data Warehousing & Aggregation</li>
+
+                            <li>Security, Auditing & FOIA Compliance</li>
+
                         </ul>
+
                     </div>
+
+
+
+                    <!-- Frontend & Reporting -->
+
+                    <div class="skill-card">
+
+                        <div class="skill-card-header">
+
+                            <div class="skill-icon" aria-hidden="true">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+
+                                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+
+                                    <line x1="9" y1="21" x2="9" y2="9"></line>
+
+                                </svg>
+
+                            </div>
+
+                            <h3>Frontend & Reporting</h3>
+
+                        </div>
+
+                        <ul class="skill-list">
+
+                            <li>HTML5, Modern CSS3 & Responsive Design</li>
+
+                            <li>JavaScript (ES6+) / React Framework</li>
+
+                            <li>SSRS (Enterprise Reporting Services)</li>
+
+                            <li>ADA & WCAG Accessibility Compliance</li>
+
+                            <li>Interactive Data Visualization & Dashboards</li>
+
+                            <li>Modern UI/UX Design Systems</li>
+
+                            <li>Real-Time AJAX & WebSockets</li>
+
+                        </ul>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </section>
+
+
+
 
 
         <section id="contact" class="section contact">
+
             <div class="container contact-container">
+
                 <h2 class="section-title">Let's Work Together</h2>
+
                 <div class="contact-wrapper" style="max-width: 600px; margin: 0 auto;">
+
                     <p class="contact-text">I'm currently open to new opportunities. Send me a message directly
-                        below!
+
+                        below, or reach out directly at <a href="mailto:Robert@rmvoss.com"
+                            style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">Robert@rmvoss.com</a>.
+
                     </p>
+
+
 
                     <div id="success-message"
                         style="display: none; text-align: center; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius-lg); border: 1px solid #10b981;">
+
                         <h3 style="color: #10b981; margin-bottom: 1rem;">Message Sent!</h3>
+
                         <p>Thanks for reaching out. I'll get back to you shortly.</p>
+
                     </div>
+
+
 
                     <form id="contact-form" action="https://formspree.io/f/xnjbdrkd" method="POST" class="contact-form"
                         style="text-align: left;">
+
                         <div style="margin-bottom: 1rem;">
+
                             <label for="name"
                                 style="display: block; margin-bottom: 0.5rem; color: var(--color-text-muted);">Name</label>
+
                             <input type="text" id="name" name="name" required
                                 style="width: 100%; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text);">
+
                         </div>
+
                         <div style="margin-bottom: 1rem;">
+
                             <label for="email"
                                 style="display: block; margin-bottom: 0.5rem; color: var(--color-text-muted);">Email</label>
+
                             <input type="email" id="email" name="email" required
                                 style="width: 100%; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text);">
+
                         </div>
+
                         <div style="margin-bottom: 1.5rem;">
+
                             <label for="message"
                                 style="display: block; margin-bottom: 0.5rem; color: var(--color-text-muted);">Message</label>
+
                             <textarea id="message" name="message" rows="5" required
                                 style="width: 100%; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text);"></textarea>
+
                         </div>
+
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+
                     </form>
+
                 </div>
+
             </div>
+
         </section>
+
     </main>
 
+
+
     <footer class="footer">
+
         <div class="container footer-container">
+
             <p>&copy; <span id="current-year">2026</span> Robert Voss. All rights reserved.</p>
+
             <div class="social-links">
-                <a href="https://linkedin.com/in/robert-voss" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+
+                <a href="https://linkedin.com/in/robert-voss" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">LinkedIn</a>
+
             </div>
+
         </div>
+
     </footer>
 
+
+
     <script src="js/particles.js"></script>
-    <script src="js/main.js?v=3"></script>
-<a href="#" id="back-to-top" class="back-to-top" aria-label="Back to top">&#8679;</a></body>
+
+    <script src="js/main.js?v=4"></script>
+
+    <a href="#" id="back-to-top" class="back-to-top" aria-label="Back to top">&#8679;</a>
+
+</body>
+
+
 
 </html>
+
 <!-- Force rebuild -->
-
-
-
-
-
-
-
-
-
-
-
-
