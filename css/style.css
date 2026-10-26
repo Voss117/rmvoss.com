@@ -935,6 +935,8 @@ button.btn-primary:active {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .header,
@@ -962,14 +964,14 @@ button.btn-primary:active {
 
     @page {
         size: letter portrait;
-        margin: 0.55in 0.85in;
+        margin: 0;
     }
 
     .resume-container {
         width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
+        max-width: 8.5in !important;
+        padding: 0.5in 0.8in !important;
+        margin: 0 auto !important;
         box-shadow: none !important;
         border: none !important;
         background: none !important;
@@ -1013,7 +1015,7 @@ button.btn-primary:active {
 
     /* Sections */
     .resume-section {
-        margin-bottom: 0.8rem !important;
+        margin-bottom: 0.75rem !important;
         break-inside: auto;
         page-break-inside: auto;
     }
@@ -1043,7 +1045,7 @@ button.btn-primary:active {
 
     /* Jobs */
     .job {
-        margin-bottom: 0.7rem !important;
+        margin-bottom: 0.68rem !important;
         break-inside: auto;
         page-break-inside: auto;
     }
@@ -1053,7 +1055,7 @@ button.btn-primary:active {
     .resume-section:nth-of-type(2) > .job:nth-of-type(2) {
         break-before: page !important;
         page-break-before: always !important;
-        margin-top: 0.5rem !important;
+        margin-top: 0.5in !important;
     }
 
     .job-header {
@@ -1094,6 +1096,8 @@ button.btn-primary:active {
     .job-details {
         margin-top: 0.3rem !important;
         padding-left: 0 !important;
+        margin-left: 0 !important;
+        list-style: none !important;
     }
 
     .job-details li {
@@ -1102,12 +1106,17 @@ button.btn-primary:active {
         margin-bottom: 0.28rem !important;
         color: #222222 !important;
         padding-left: 1.15rem !important;
+        position: relative !important;
         break-inside: avoid;
         page-break-inside: avoid;
     }
 
     .job-details li::before {
+        content: "•" !important;
+        position: absolute !important;
+        left: 0 !important;
         color: #000000 !important;
+        font-weight: bold !important;
     }
 
     .job-details strong {
@@ -1144,6 +1153,12 @@ button.btn-primary:active {
     }
 
     /* Certifications */
+    .skill-list {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        list-style: none !important;
+    }
+
     .skill-list li {
         font-size: 0.84rem !important;
         line-height: 1.35 !important;
