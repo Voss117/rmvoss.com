@@ -932,6 +932,7 @@ button.btn-primary:active {
     body {
         background-color: #ffffff !important;
         color: #000000 !important;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
@@ -961,7 +962,7 @@ button.btn-primary:active {
 
     @page {
         size: letter portrait;
-        margin: 0.5in 0.6in;
+        margin: 0.55in 0.85in;
     }
 
     .resume-container {
@@ -973,6 +974,7 @@ button.btn-primary:active {
         border: none !important;
         background: none !important;
         color: #000000 !important;
+        box-sizing: border-box !important;
     }
 
     .resume-container::before {
@@ -984,23 +986,24 @@ button.btn-primary:active {
         text-align: center;
         margin-bottom: 0.75rem !important;
         padding-bottom: 0.5rem !important;
-        border-bottom: 1.5px solid #222 !important;
+        border-bottom: 1px solid #ddd !important;
     }
 
     .resume-header h1 {
         font-size: 2.1rem !important;
-        margin-bottom: 0.2rem !important;
+        margin-bottom: 0.25rem !important;
         color: #000000 !important;
         -webkit-text-fill-color: #000000 !important;
-        line-height: 1.1 !important;
-        letter-spacing: -0.02em;
+        line-height: 1.15 !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.01em;
     }
 
     .resume-header p {
         font-size: 0.92rem !important;
-        margin-top: 0.2rem !important;
-        color: #222222 !important;
-        line-height: 1.35 !important;
+        margin-top: 0.25rem !important;
+        color: #333333 !important;
+        line-height: 1.4 !important;
     }
 
     .resume-header a {
@@ -1010,7 +1013,7 @@ button.btn-primary:active {
 
     /* Sections */
     .resume-section {
-        margin-bottom: 0.85rem !important;
+        margin-bottom: 0.8rem !important;
         break-inside: auto;
         page-break-inside: auto;
     }
@@ -1018,11 +1021,11 @@ button.btn-primary:active {
     .resume-section h3 {
         font-size: 1.15rem !important;
         color: #000000 !important;
-        border-bottom: 1.5px solid #000000 !important;
+        border-bottom: 1px solid #000000 !important;
         margin-bottom: 0.45rem !important;
         padding-bottom: 0.2rem !important;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
+        text-transform: none !important;
+        font-weight: 700 !important;
         break-after: avoid;
         page-break-after: avoid;
     }
@@ -1032,7 +1035,7 @@ button.btn-primary:active {
     }
 
     .resume-section p {
-        font-size: 0.875rem !important;
+        font-size: 0.86rem !important;
         line-height: 1.4 !important;
         color: #222222 !important;
         margin-bottom: 0.35rem !important;
@@ -1040,12 +1043,12 @@ button.btn-primary:active {
 
     /* Jobs */
     .job {
-        margin-bottom: 0.75rem !important;
+        margin-bottom: 0.7rem !important;
         break-inside: auto;
         page-break-inside: auto;
     }
 
-    /* Clean page break before the second job to guarantee perfect 2-page balance on mobile & desktop */
+    /* Clean page break before the second job to guarantee perfect 2-page balance */
     .job.job-page-break,
     .resume-section:nth-of-type(2) > .job:nth-of-type(2) {
         break-before: page !important;
@@ -1072,17 +1075,17 @@ button.btn-primary:active {
     .job-company {
         font-size: 0.92rem !important;
         font-weight: 600 !important;
-        color: #2b2b2b !important;
+        color: #222222 !important;
         margin-bottom: 0.25rem !important;
     }
 
     .job-date {
-        font-size: 0.85rem !important;
-        color: #333333 !important;
+        font-size: 0.82rem !important;
+        color: #444444 !important;
         background: none !important;
-        border: 1px solid #999999 !important;
-        padding: 0.15rem 0.45rem !important;
-        border-radius: 3px !important;
+        border: 1px solid #bbb !important;
+        padding: 0.12rem 0.45rem !important;
+        border-radius: 4px !important;
         white-space: nowrap !important;
         font-family: inherit !important;
         font-weight: 500 !important;
@@ -1096,9 +1099,9 @@ button.btn-primary:active {
     .job-details li {
         font-size: 0.84rem !important;
         line-height: 1.35 !important;
-        margin-bottom: 0.3rem !important;
+        margin-bottom: 0.28rem !important;
         color: #222222 !important;
-        padding-left: 1rem !important;
+        padding-left: 1.15rem !important;
         break-inside: avoid;
         page-break-inside: avoid;
     }
@@ -1116,8 +1119,8 @@ button.btn-primary:active {
     .skills-grid-compact {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.5rem 1.25rem !important;
-        margin-bottom: 0.5rem !important;
+        gap: 0.5rem 1.5rem !important;
+        margin-bottom: 0.45rem !important;
         break-inside: avoid;
         page-break-inside: avoid;
     }
@@ -1125,7 +1128,7 @@ button.btn-primary:active {
     .skill-category strong {
         color: #000000 !important;
         font-size: 0.88rem !important;
-        margin-bottom: 0.15rem !important;
+        margin-bottom: 0.12rem !important;
         display: block !important;
     }
 
